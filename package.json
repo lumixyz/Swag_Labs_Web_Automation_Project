@@ -1,0 +1,14 @@
+{
+  "name": "swag_labs_web_automation_project",
+  "version": "1.0.0",
+  "description": "Swag Labs E-Commerce web application automation project. Using Playwright and TypeScript.\r https://github.com/lumixyz/Swag_Labs_Web_Automation_Project.git \r https://github.com/lumixyz/Swag_Labs_Web_Automation_Project/pull/new/test",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.2"
+  }
+}
