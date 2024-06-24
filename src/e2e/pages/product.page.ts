@@ -15,7 +15,7 @@ export default class Product extends Base{
    cart = '.shopping_cart_link';
    itemsList = "//div[@class='inventory_list']//a[contains(@data-test, 'title')]//div";
    addToCartBtnList = "//div[@class='inventory_list']//button";
-   priceList = "//div[@class='inventory_item_price']";
+   priceList = "//div[@class='inventory_item_price']/text()[2]";
 
 
    //Actions
@@ -47,15 +47,70 @@ export default class Product extends Base{
         await this.page.locator(this.cart).click();
     }
 
-    //values: az, za, hilo, lohi
-    async filterBy(value: string){
-        await this.page.locator(this.filter).selectOption({value: value});
+    async filterBy(filterText: string){
+        await this.page.locator(this.filter).selectOption(filterText);
     }
 
     async getItem(name: string){
-        this.getMultiEles(this.itemsList, name);
+        await this.getMultiEles(this.itemsList, name);
     }
 
-    
+    async addToCartFromHome(item: string){
+        let itemText = item.split(' ').join('-').toLowerCase();
+        await this.page
+        .locator("//div[@class='inventory_list']//button[contains(@name," + itemText + ")]").click();
+    }
+
+    async checkFilterByPriceWorks(filterText: string){
+        let prices = await this.page.locator(this.priceList).allInnerTexts();
+        let boolVal = true;
+
+        switch(filterText.toLowerCase()) {
+            case 'price (low to high)':
+                for(let i = 0; i < prices.length-1; i++){
+                        if (prices[i] > prices[i+1]){
+                            boolVal = false;
+                            break;
+                        }
+                 } 
+              break;
+            case 'price (high to low)':
+                for(let i = 0; i < prices.length-1; i++){
+                        if (prices[i] < prices[i+1]){
+                            boolVal = false;
+                            break;
+                        }   
+                } 
+              break;
+          }
+
+          return boolVal;
+    }
+
+    async checkFilterByNameWorks(filterText: string){
+        let names = await this.page.locator(this.itemsList).allTextContents();
+        let boolVal = true;
+
+        switch(filterText.toLowerCase()) {
+            case 'name (a to z)':
+                for(let i = 0; i < names.length-1; i++){
+                        if (names[i] > names[i+1]){
+                            boolVal = false;
+                            break;
+                        }
+                 } 
+              break;
+            case 'name (z to a)':
+                for(let i = 0; i < names.length-1; i++){
+                        if (names[i] < names[i+1]){
+                            boolVal = false;
+                            break;
+                        }   
+                } 
+              break;
+          }
+
+          return boolVal;
+    }
     
 }
