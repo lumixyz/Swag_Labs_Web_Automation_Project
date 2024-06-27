@@ -43,7 +43,7 @@ export default class Product extends Base{
         await this.page.locator(this.closeMenuBtn).click();
     }
 
-    async getCart(){
+    async goToCart(){
         await this.page.locator(this.cart).click();
     }
 
@@ -58,7 +58,7 @@ export default class Product extends Base{
     async addToCartFromHome(item: string){
         let itemText = item.split(' ').join('-').toLowerCase();
         await this.page
-        .locator("//div[@class='inventory_list']//button[contains(@name," + itemText + ")]").click();
+        .locator("//div[@class='inventory_list']//button[contains(@name," + "'" + itemText + "'" + ")]").click();
     }
 
     async checkFilterByPriceWorks(filterText: string){
