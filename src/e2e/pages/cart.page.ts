@@ -19,7 +19,8 @@ export default class Cart extends Base{
         await this.page.locator("//button[contains(@id, " + "'" + itemText + "'" + ")]").click();
     }
 
-    async checkItemInCart(item: string){
+    async checkItemInCart(itemName: string){
+        let item = (await this.titleCase(itemName)).toString();
         let boolVal = await this.page.locator("//div[normalize-space()=" + "'" + item +"'" + "]").isVisible();
         if(boolVal) return true;
     }

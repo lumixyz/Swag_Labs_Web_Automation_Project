@@ -8,7 +8,7 @@ export default class Base{
         this.page = page
     }
 
-    //Common Actions
+    //Utility Methods
     getEle(locator: string){
         return this.page.locator(locator);
       }
@@ -19,4 +19,12 @@ export default class Base{
             if (await ele.textContent() == eleText) ele.click();
         }
       }
+
+      async titleCase(str: string) {
+        return str
+          .toLowerCase()
+          .split(' ')
+          .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(' ');
+     }
 }
