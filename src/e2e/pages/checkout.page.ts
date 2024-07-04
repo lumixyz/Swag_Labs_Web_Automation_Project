@@ -40,4 +40,5 @@ export default class Checkout extends Base{
        return this.page.locator(this.errMsg);
     }
     
+
 } 

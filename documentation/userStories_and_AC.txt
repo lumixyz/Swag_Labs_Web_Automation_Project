@@ -51,5 +51,5 @@ Acceptance Criteria:
 1. Given that a user is logged in and in their cart where there are some items
 2. When they click 'remove' on an item
 3. Then the item should be deleted from their cart
-4. And the cart icon number should decrease by 1
+4. And the cart icon number should be decreased by 1
 
