@@ -10,6 +10,7 @@ export default class Login extends Base{
    userName = '#user-name';
    password = '#password';
    loginBtn = '#login-button';
+   loginErr = "//*[@id='login_button_container']/div/form/div[3]/h3";
 
 
    //Actions
@@ -22,7 +23,11 @@ export default class Login extends Base{
     }
 
     async clickLoginBtn(){
-        await this.page.locator(this.password).click();
+        await this.page.locator(this.loginBtn).click();
+    }
+
+    async getLoginErr(){
+        return this.page.locator(this.loginErr);
     }
 
 } 
