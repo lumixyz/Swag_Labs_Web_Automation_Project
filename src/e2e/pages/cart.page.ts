@@ -14,8 +14,6 @@ export default class Cart extends Base{
    removeBtnList = "//button[contains(@id, 'remove-')]";
    priceList = "//div[@class='inventory_item_price']/text()[2]";
 
-
-
    //Actions
    async getCheckout(){
     await this.page.locator(this.checkout).click();
