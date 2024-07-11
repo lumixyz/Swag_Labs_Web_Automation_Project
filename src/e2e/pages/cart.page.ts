@@ -7,20 +7,20 @@ export default class Cart extends Base{
     }
 
    //Locators
-   continueShopping = '#continue-shopping';
-   checkout = '#checkout';
-   pageTitle = '.title';
-   cartIconNo = '.shopping_cart_badge';
-   removeBtnList = "//button[contains(@id, 'remove-')]";
-   priceList = "//div[@class='inventory_item_price']/text()[2]";
+   continueShopping = () => this.page.locator('#continue-shopping');
+   checkout = () => this.page.locator('#checkout');
+   pageTitle = () => this.page.locator('.title');
+   cartIconNo = () => this.page.locator('.shopping_cart_badge');
+   removeBtnList = () => this.page.locator("//button[contains(@id, 'remove-')]");
+   priceList = () => this.page.locator("//div[@class='inventory_item_price']/text()[2]");
 
    //Actions
    async getCheckout(){
-    await this.page.locator(this.checkout).click();
+    await this.checkout().click();
    }
 
    async getProductsPage(){
-    await this.page.locator(this.continueShopping).click();
+    await this.continueShopping().click();
    }
    
    async removeItem(itemName: string){
@@ -37,7 +37,7 @@ export default class Cart extends Base{
     }
 
     async getCartBadge(){
-        return this.page.locator(this.cartIconNo); //assert on the text content of the ele
+        return this.cartIconNo(); //assert on the text content of the ele
     }
 
 } 
