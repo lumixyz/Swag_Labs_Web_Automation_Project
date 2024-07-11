@@ -7,52 +7,52 @@ export default class Product extends Base{
     }
 
    //Locators
-   menu = '#react-burger-menu-btn';
-   menuList = ".bm-item-list>a";
-   closeMenuBtn = '#react-burger-cross-btn';
-   pageTitle = '.title';
-   filter = '.product_sort_container';
-   cart = '.shopping_cart_link';
-   itemsList = "//div[@class='inventory_list']//a[contains(@data-test, 'title')]//div";
-   addToCartBtnList = "//div[@class='inventory_list']//button";
-   priceList = "//div[@class='inventory_item_price']/text()[2]";
+   menu = () => this.page.locator( '#react-burger-menu-btn');
+   menuList = () => this.page.locator(".bm-item-list>a");
+   closeMenuBtn = () => this.page.locator('#react-burger-cross-btn');
+   pageTitle = () => this.page.locator('.title');
+   filter = () => this.page.locator('.product_sort_container');
+   cart = () => this.page.locator('.shopping_cart_link');
+   itemsList = () => this.page.locator("//div[@class='inventory_list']//a[contains(@data-test, 'title')]//div");
+   addToCartBtnList = () => this.page.locator("//div[@class='inventory_list']//button");
+   priceList = () => this.page.locator("//div[@class='inventory_item_price']/text()[2]");
 
 
    //Actions
     async getMenu(){
-        await this.page.locator(this.menu).click();
+        await this.menu().click();
     }
 
     async getAllItems(){
-        await this.page.locator(this.menuList).first().click();
+        await this.menuList().filter({hasText: "all items"}).click();
     }
 
     async getAboutPage(){
-        await this.page.locator(this.menuList).nth(2).click();
+        await this.menuList().filter({hasText: "about"}).click();
     }
 
     async logout(){
-        await this.page.locator(this.menuList).nth(3).click();
+        await this.menuList().filter({hasText: "logout"}).click();
     }
 
     async resetApp(){
-        await this.page.locator(this.menuList).last().click();
+        await this.menuList().filter({hasText: "reset app state"}).click();
     }
 
     async closeMenu(){
-        await this.page.locator(this.closeMenuBtn).click();
+        await this.closeMenuBtn().click();
     }
 
     async goToCart(){
-        await this.page.locator(this.cart).click();
+        await this.cart().click();
     }
 
     async filterBy(filterText: string){
-        await this.page.locator(this.filter).selectOption(filterText);
+        await this.filter().selectOption(filterText);
     }
 
     async getItem(name: string){
-        await this.getMultiEles(this.itemsList, name);
+        this.itemsList().filter({hasText: name}).click();
     }
 
     async addToCartFromHome(item: string){
@@ -62,7 +62,7 @@ export default class Product extends Base{
     }
 
     async checkFilterByPriceWorks(filterText: string){
-        let prices = await this.page.locator(this.priceList).allInnerTexts();
+        let prices = await this.priceList().allInnerTexts();
         let boolVal = true;
 
         switch(filterText.toLowerCase()) {
@@ -88,7 +88,7 @@ export default class Product extends Base{
     }
 
     async checkFilterByNameWorks(filterText: string){
-        let names = await this.page.locator(this.itemsList).allTextContents();
+        let names = await this.itemsList().allTextContents();
         let boolVal = true;
 
         switch(filterText.toLowerCase()) {

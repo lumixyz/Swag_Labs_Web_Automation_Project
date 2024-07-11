@@ -1,4 +1,4 @@
-import {Page} from '@playwright/test';
+import {Locator, Page} from '@playwright/test';
 
 export default class Base{
 
@@ -9,17 +9,6 @@ export default class Base{
     }
 
     //Utility Methods
-    getEle(locator: string){
-        return this.page.locator(locator);
-      }
-
-      async getMultiEles(multiLocator: string, eleText: string){
-        const elements = await this.page.$$(multiLocator);
-        for(const ele of elements){
-            if (await ele.textContent() == eleText) ele.click();
-        }
-      }
-
       async titleCase(str: string) {
         return str
           .toLowerCase()

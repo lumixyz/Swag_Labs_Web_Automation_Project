@@ -1,6 +1,6 @@
 import {test, expect} from "../fixtures/base.fixture";
-import {loginData} from "../utils/testData/login.data";
-import {messages} from "../utils/testData/messages.data";
+import * as loginData from "../utils/testData/login.data.json";
+import * as messages from "../utils/testData/messages.data.json";
 
 
 test.describe('Login Tests', () =>{
@@ -10,7 +10,7 @@ test.describe('Login Tests', () =>{
                 await login.setUname(data.username);
                 await login.setPassword(data.password);
                 await login.clickLoginBtn();
-                await expect(product.getEle(product.pageTitle)).toContainText(messages.login_success);
+                await expect(product.pageTitle()).toContainText(messages.login_success);
             })
         })
     }
@@ -21,21 +21,21 @@ test.describe('Login Tests', () =>{
                 await login.setUname(data.username);
                 await login.setPassword(data.password);
                 await login.clickLoginBtn();
-                await expect(login.getEle(login.loginErr)).toContainText(messages.login_error);
+                await expect(login.loginErr()).toContainText(messages.login_error);
             })
 
 
             test(`Empty password login ${data.id}`, async ({login}) => {
                 await login.setUname(data.username);
                 await login.clickLoginBtn();
-                await expect(login.getEle(login.loginErr)).toContainText(messages.password_required);
+                await expect(login.loginErr()).toContainText(messages.password_required);
             })
 
 
             test(`Empty username login ${data.id}`, async ({login}) => {
                 await login.setPassword(data.password);
                 await login.clickLoginBtn();
-                await expect(login.getEle(login.loginErr)).toContainText(messages.username_required);
+                await expect(login.loginErr()).toContainText(messages.username_required);
             })
 
         })
