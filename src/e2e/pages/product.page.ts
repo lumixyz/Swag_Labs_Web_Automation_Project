@@ -1,3 +1,4 @@
+import { Locator } from '@playwright/test';
 import Base from './base.page';
 
 export default class Product extends Base{
@@ -24,22 +25,27 @@ export default class Product extends Base{
     }
 
     async getAllItems(){
+        await this.getMenu();
         await this.menuList().filter({hasText: "all items"}).click();
     }
 
     async getAboutPage(){
+        await this.getMenu();
         await this.menuList().filter({hasText: "about"}).click();
     }
 
     async logout(){
+        await this.getMenu();
         await this.menuList().filter({hasText: "logout"}).click();
     }
 
     async resetApp(){
+        await this.getMenu();
         await this.menuList().filter({hasText: "reset app state"}).click();
     }
 
     async closeMenu(){
+        await this.getMenu();
         await this.closeMenuBtn().click();
     }
 
@@ -59,6 +65,11 @@ export default class Product extends Base{
         let itemText = item.split(' ').join('-').toLowerCase();
         await this.page
         .locator("//div[@class='inventory_list']//button[contains(@name," + "'" + itemText + "'" + ")]").click();
+    }
+
+    addToCartBtn(item: string): Locator{
+        let Text = item.split(' ').join('-').toLowerCase();
+        return this.page.locator("//div[@class='inventory_list']//button[contains(@name," + "'" + Text + "'" + ")]");
     }
 
     async checkFilterByPriceWorks(filterText: string){
