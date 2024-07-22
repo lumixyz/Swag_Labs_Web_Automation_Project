@@ -16,9 +16,8 @@ export default class Product extends Base{
    cart = () => this.page.locator('.shopping_cart_link');
    itemsList = () => this.page.locator("//div[@class='inventory_list']//a[contains(@data-test, 'title')]//div");
    addToCartBtnList = () => this.page.locator("//div[@class='inventory_list']//button");
-   priceList = () => this.page.locator("//div[@class='inventory_item_price']/text()[2]");
-
-
+   priceList = () => this.page.locator("//*[@id= 'inventory_container']/div/div[1]/div[2]/div[2]/div/text()[2]").all();
+   
    //Actions
     async getMenu(){
         await this.menu().click();
@@ -59,7 +58,7 @@ export default class Product extends Base{
 
     async getItem(name: string){
         this.itemsList().filter({hasText: name}).click();
-    }
+    } 
 
     async addToCartFromHome(item: string){
         let itemText = item.split(' ').join('-').toLowerCase();
@@ -73,7 +72,7 @@ export default class Product extends Base{
     }
 
     async checkFilterByPriceWorks(filterText: string){
-        let prices = await this.priceList().allInnerTexts();
+        let prices = await this.priceList();
         let boolVal = true;
 
         switch(filterText.toLowerCase()) {

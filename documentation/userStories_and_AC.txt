@@ -7,7 +7,7 @@ Acceptance Criteria:
 3. Then they should be successfully logged in to their account.
 
 
-User story 2 - Product Search by Alphabeth:
+User story 2 - Product filter by Alphabeth:
 As a user, I want to search through the catalogue so that I can quickly find my desired products.
 
 Acceptance Criteria:
@@ -15,7 +15,7 @@ Acceptance Criteria:
 2. When they use the filter button to sort items 
 3. Then the products are listed in either ascending or decending alphabetical order
 
-User story 3- Product Search by Price:
+User story 3- Product filter by Price:
 As a user, I want to be able to filter pridycts by price, so that I can quickly find items that best suit my budget.
 
 Acceptance Criteria:

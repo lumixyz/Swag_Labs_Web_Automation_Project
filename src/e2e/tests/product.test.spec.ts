@@ -9,17 +9,14 @@ test.describe('Product Tests', () =>{
                 await login.auth();
                 await product.resetApp();
                 await product.addToCartFromHome(data.item);
-                await expect(product.addToCartBtn(data.item)).toHaveText(messages.remove_from_cart_text);
+                expect(product.addToCartBtn(data.item)).toHaveText(messages.remove_from_cart_text);
             })
-        })
+        }) 
     }
 
-    // for(const data of productData.invalid){
-    //     test.describe('Invalid product page tests', () =>{
-    //         test(`${data.id}`, async ({login}) => {
-    //             await login.auth();
-    //             await expect(login.loginErr()).toContainText(messages.login_error);
-    //         })
-    //     })
-    // }
+    test.describe("Filter products by price",() =>{
+        test("Filter products from highest to lowest price", async ({login, product}) => {
+            await login.auth();
+        })
+    })
 })
