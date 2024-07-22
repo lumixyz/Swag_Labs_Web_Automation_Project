@@ -7,22 +7,34 @@ export default class Login extends Base{
     }
 
    //Locators
-   userName = '#user-name';
-   password = '#password';
-   loginBtn = '#login-button';
-
+   userName = () => this.page.locator('#user-name');
+   password = () => this.page.locator('#password');
+   loginBtn = () => this.page.locator('#login-button');
+   loginErr = () => this.page.locator("//*[@id='login_button_container']/div/form/div[3]/h3");
 
    //Actions
     async setUname(username: string){
-        await this.page.locator(this.userName).fill(username);
+        await this.userName().fill(username);
     }
 
     async setPassword(password: string){
-        await this.page.locator(this.password).fill(password);
+        await this.password().fill(password);
     }
 
     async clickLoginBtn(){
-        await this.page.locator(this.password).click();
+        await this.loginBtn().click();
     }
+
+    async getLoginErr(){
+        return this.loginErr();
+    }
+
+    //auth
+    async auth(){
+        await this.getLogin();
+        await this.setUname('standard_user');
+        await this.setPassword('secret_sauce');
+        await this.clickLoginBtn();
+    } 
 
 } 

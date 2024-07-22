@@ -1,0 +1,30 @@
+{
+    "valid": [
+        {
+            "id": "1",
+            "item": "Sauce Labs Backpack"
+        },
+        {
+            "id": "2",
+            "item": "Sauce Labs Bike Light"
+        },
+        {
+            "id": "3",
+            "item": "Sauce Labs Bolt T-Shirt" 
+        }
+
+    ], 
+
+    "invalid": [
+        {
+
+        },
+        {
+
+        },
+        {
+
+        }
+
+    ]
+}

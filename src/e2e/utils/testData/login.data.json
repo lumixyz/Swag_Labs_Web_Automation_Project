@@ -1,0 +1,67 @@
+{
+    "valid": [
+        {
+            "id": "1",
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "2",
+            "username": "standard_user",
+            "password": "secret_sauce"
+        }
+    ],
+
+    "invalid": [
+        {
+            "id": "1",
+            "username": "standard_user",
+            "password": "RW=UEk],V"
+        },
+        {
+            "id": "2",
+            "username": "Beyonce",
+            "password": "[jZ]}SPfT"
+        },
+        {
+            "id": "3",
+            "username": "Abel",
+            "password": "Ysx0n)jXU"
+        },
+        {
+            "id": "4",
+            "username": "Taylor",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "5",
+            "username": "Thor",
+            "password": "-Zt,EHG^L"
+        },
+        {
+            "id": "6",
+            "username": "Angie",
+            "password": "AA(8RgjC("
+        },
+        {
+            "id": "7",
+            "username": "Shimmer",
+            "password": "secret_sauce"
+        },
+        {
+            "id": "8",
+            "username": "standard_user",
+            "password": "ID.M22346"
+        },
+        {
+            "id": "9",
+            "username": "Victor",
+            "password": "@.FfbOCsO"
+        },
+        {
+            "id": "10",
+            "username": "Bunmi",
+            "password": "f7-/L;Flj"
+        }
+    ]
+}

@@ -3,12 +3,19 @@
   "version": "1.0.0",
   "description": "Swag Labs E-Commerce web application automation project. Using Playwright and TypeScript.\r https://github.com/lumixyz/Swag_Labs_Web_Automation_Project.git \r https://github.com/lumixyz/Swag_Labs_Web_Automation_Project/pull/new/test",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "postinstall": "npx playwright install",
+    "test": "npx playwright test",
+    "report": "npx playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.44.1",
     "@types/node": "^20.14.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
   }
 }
