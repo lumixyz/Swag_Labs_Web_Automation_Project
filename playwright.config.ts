@@ -9,7 +9,7 @@ require('dotenv').config();
 export default defineConfig({
   testDir: 'src/e2e/tests',
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: !true,
   //30 seconds timeout
   timeout: 1*30*1000,
   expect: {
@@ -29,7 +29,7 @@ export default defineConfig({
     {open: "on-failure"}]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    headless: !process.env.CI,
+    headless: process.env.CI? true : false,
     baseURL: 'https://www.saucedemo.com/',
     video: process.env.CI? "off":"on",
     trace: process.env.CI? "off":"on",
