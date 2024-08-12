@@ -1,5 +1,12 @@
+version: 2.1
+
+workflows:
+  run-test-workflow:
+    jobs:
+      - run-test 
+
 jobs:
-  run-tests:
+  run-test:
     docker:
       - image: cimg/base:2023.11
     parallelism: 4
