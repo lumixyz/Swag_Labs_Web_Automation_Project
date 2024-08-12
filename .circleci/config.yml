@@ -19,7 +19,7 @@ jobs:
             pnpm run serve &  # Start server in the background
             sleep 10          # Give the server time to start
 
-            TESTFILES=$(circleci tests glob "../src/e2e/tests/*.spec.ts" | circleci tests split)
+            TESTFILES=$(circleci tests glob "../src/e2e/**/*.spec.ts" | circleci tests split)
             if [ -z "$TESTFILES" ]; then
               echo "No test files found."
               exit 1
