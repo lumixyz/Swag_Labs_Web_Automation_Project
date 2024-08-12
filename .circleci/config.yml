@@ -12,20 +12,20 @@ jobs:
     parallelism: 4
     resource_class: large
     steps:
-    - run:
-        name: Run Server and Tests
-        command: |
-          mkdir -p test-results
-          pnpm run serve &  # Start server in the background
-          sleep 10          # Give the server time to start
+      - run:
+          name: Run Server and Tests
+          command: |
+            mkdir -p test-results
+            pnpm run serve &  # Start server in the background
+            sleep 10          # Give the server time to start
 
-          TESTFILES=$(circleci tests glob "../src/e2e/tests/*.spec.ts" | circleci tests split)
-          if [ -z "$TESTFILES" ]; then
-            echo "No test files found."
-            exit 1
-          else
-            echo "$TESTFILES" | xargs pnpm playwright test --config=playwright.config.ci.ts --reporter=junit
-          fi
+            TESTFILES=$(circleci tests glob "../src/e2e/tests/*.spec.ts" | circleci tests split)
+            if [ -z "$TESTFILES" ]; then
+              echo "No test files found."
+              exit 1
+            else
+              echo "$TESTFILES" | xargs pnpm playwright test --config=playwright.config.ci.ts --reporter=junit
+            fi
 
 
       - store_test_results:
