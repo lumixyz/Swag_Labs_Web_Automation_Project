@@ -2,16 +2,9 @@ import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
 import path from 'path';
 
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
 
 // Read from ".env" file.
 dotenv.config({ path: path.resolve(__dirname, '.env') });
-
-// Alternatively, read from "../my.env" file.
-dotenv.config({ path: path.resolve(__dirname, '..', 'my.env') });
 
 export default defineConfig({
   testDir: 'src/e2e/tests',
