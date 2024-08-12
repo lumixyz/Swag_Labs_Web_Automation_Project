@@ -8,25 +8,16 @@ workflows:
 jobs:
   run-test:
     docker:
-      - image: cimg/base:2023.11
+      - image: mcr.microsoft.com/playwright:v1.46.0-jammy
     parallelism: 4
     resource_class: large
     steps:
+      - checkout
       - run:
-          name: Run Server and Tests
-          command: |
-            mkdir -p test-results
-            pnpm run serve &  # Start server in the background
-            sleep 10          # Give the server time to start
-
-            TESTFILES=$(circleci tests glob "../src/e2e/**/*.spec.ts" | circleci tests split)
-            if [ -z "$TESTFILES" ]; then
-              echo "No test files found."
-              exit 1
-            else
-              echo "$TESTFILES" | xargs pnpm playwright test --config=playwright.config.ci.ts --reporter=junit
-            fi
-
-
+          name: Download dependency
+          command: npm ci
+      - run:
+          name: Run tests
+          command: npm run test 
       - store_test_results:
           path: results.xml
