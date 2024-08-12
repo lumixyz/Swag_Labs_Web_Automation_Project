@@ -1,21 +1,55 @@
-#comments 
-
 version: 2.1
-jobs:
-  run-test:
+
+executors:
+  node-executor:
     docker:
-      - image: mcr.microsoft.com/playwright:v1.45.1-jammy
+      - image: cimg/node:20.2.0  # Use a Node.js image with pnpm and npm installed
+    working_directory: ~/project  # Set a working directory for your project
+
+jobs:
+  run-e2e-tests:
+    executor: node-executor
+    parallelism: 4  # Adjust this based on the number of parallel runs you want
     steps:
-      - checkout
+      - checkout  # Checkout the project code
+      
       - run:
-          name: Download dependency
-          command: npm ci
+          name: Install Dependencies
+          command: |
+            npm install -g pnpm  # Install pnpm
+            pnpm install  # Install project dependencies
+
       - run:
-          name: Run tests
-          command: npm run test
+          name: Debug Test Files
+          command: |
+            echo "Looking for test files in src/e2e/tests"
+            TESTFILES=$(circleci tests glob "src/e2e/tests/*.spec.ts")
+            if [ -z "$TESTFILES" ]; then
+              echo "No test files found."
+              exit 1
+            else
+              echo "Test files found:"
+              echo "$TESTFILES"
+            fi
+
+      - run:
+          name: Start Server and Run Tests
+          command: |
+            pnpm run serve &  # Start the server in the background
+            sleep 10  # Give the server time to start
+            TESTFILES=$(circleci tests glob "src/e2e/tests/*.spec.ts" | circleci tests split)
+            if [ -z "$TESTFILES" ]; then
+              echo "No test files found."
+              exit 1
+            else
+              echo "$TESTFILES" | xargs pnpm playwright test --config=playwright.config.ci.ts --reporter=junit
+            fi
+
       - store_test_results:
-          path: results.xml
+          path: test-results  # Store test results in the specified directory
+
 workflows:
+  version: 2
   run-test-workflow:
     jobs:
-      - run-test   
+      - run-e2e-tests
