@@ -15,26 +15,23 @@ type TestFixtures = {
 
 export const test = base.extend<TestFixtures>({
     
-    login: async({page}, use) => {
+    login: [async({page}, use) => {
         const login = new Login(page);
         await login.getLogin();
+        await login.auth();
         await use(login);
-    },
+    },{auto:true}],
 
     product: async ({page}, use) => {
         await use(new Product(page));
     },
 
     cart: async ({page}, use) => {
-        const cart = new Cart(page);
-        await cart.getCheckout();
-        await use(cart);
+        await use(new Cart(page));
     },
     
     checkout: async({page}, use) =>{
-        const checkout = new Checkout(page);
-        await checkout.getCheckout();
-        await use(checkout);
+        await use(new Checkout(page));
     }
 })
 

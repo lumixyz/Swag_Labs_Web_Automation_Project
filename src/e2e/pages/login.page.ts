@@ -31,7 +31,6 @@ export default class Login extends Base{
 
     //auth
     async auth(){
-        await this.getLogin();
         await this.setUname('standard_user');
         await this.setPassword('secret_sauce');
         await this.clickLoginBtn();

@@ -1,21 +1,34 @@
 #comments 
 
 version: 2.1
-jobs:
-  run-test:
-    docker:
-      - image: mcr.microsoft.com/playwright:v1.45.1-jammy
-    steps:
-      - checkout
-      - run:
-          name: Download dependency
-          command: npm ci
-      - run:
-          name: Run tests
-          command: npm run test
-      - store_test_results:
-          path: results.xml
+
 workflows:
   run-test-workflow:
     jobs:
-      - run-test   
+      - run-e2e-tests
+
+jobs:
+  run-e2e-tests:
+    docker:
+      - image: cimg/base:2023.11
+    parallelism: 4
+    resource_class: large
+    steps:
+      #- checkout
+      #- run:
+          #name: Download dependency
+          #command: npm ci
+      - run:
+          name: Run tests
+          command: |
+            #mkdir test-results #can also be switched out for passing PLAYWRIGHT_JUNIT_OUTPUT_NAME directly to Playwright
+            pnpm run serve &
+            TESTFILES=$(circleci tests glob "src/e2e/tests/*.spec.ts")
+            echo "$TESTFILES" | circleci tests run --command="xargs pnpm playwright test --config=playwright.config.ci.ts --reporter=junit" --verbose --split-by=timings
+
+      - store_test_results:
+          path: results.xml
+  
+
+
+

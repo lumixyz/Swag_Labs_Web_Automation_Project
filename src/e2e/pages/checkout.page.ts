@@ -7,6 +7,7 @@ export default class Checkout extends Base{
     }
 
    //Locators
+   title = () => this.page.locator('//*[@id="header_container"]/div[2]/span');
    fName = () => this.page.locator('#first-name');
    lName = () => this.page.locator('#last-name');
    postcalCode = () => this.page.locator('#postal-code');
@@ -15,15 +16,19 @@ export default class Checkout extends Base{
    errMsg = () => this.page.locator("h3[data-test='error']");
    cartItemList = () => this.page.locator("#checkout_summary_container > div > div.cart_list > div.cart_item > div>a>div.inventory_item_name");
    cartQuantity = () => this.page.locator("//*[@id='checkout_summary_container']/div/div[1]/div[4]/div");
-   subTotalPrice = () => this.page.locator("//div[@class = 'summary_subtotal_label']/text()[2]");
-   tax = () => this.page.locator("//div[@class = 'summary_tax_label']/text()[2]");
-   totalPrice = () => this.page.locator("//div[@class = 'summary_total_label']/text()[2]");
+   subTotalPrice = () => this.page.locator("//div[@class = 'summary_subtotal_label']");
+   tax = () => this.page.locator("//div[@class = 'summary_tax_label']");
+   totalPrice = () => this.page.locator("//div[@class = 'summary_total_label']");
    finish = () => this.page.locator('#finish');
    backHome = () => this.page.locator('#back-to-products');
    checkoutCompleteMsg = () => this.page.locator('#checkout_complete_container > h2');
  
    //Actions
-    async setFName(fname: string){
+   async getTitle(){
+        return this.title();
+   } 
+   
+   async setFName(fname: string){
         await this.fName().fill(fname);
     }
 
@@ -51,17 +56,17 @@ export default class Checkout extends Base{
         return this.cartItemList();
      }
 
-     async getSubTotal(){
-        return this.subTotalPrice();
-     }
+    async getSubTotal() {
+        return await this.subTotalPrice().textContent();
+    }
     
-     async getTax(){
-        return this.tax();
-     }
-
-     async getTotal(){
-        return this.totalPrice();
-     }
+    async getTax() {
+        return await this.tax().textContent();
+    }
+    
+    async getTotal() {
+        return await this.totalPrice().textContent();
+    }
 
      async goHome(){
         await this.backHome().click();
