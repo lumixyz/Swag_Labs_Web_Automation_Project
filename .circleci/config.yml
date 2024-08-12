@@ -1,16 +1,10 @@
+#comments 
+
 version: 2.1
-
-workflows:
-  run-test-workflow:
-    jobs:
-      - run-test 
-
 jobs:
   run-test:
     docker:
-      - image: mcr.microsoft.com/playwright:v1.46.0-jammy
-    parallelism: 4
-    resource_class: large
+      - image: mcr.microsoft.com/playwright:v1.45.1-jammy
     steps:
       - checkout
       - run:
@@ -18,6 +12,10 @@ jobs:
           command: npm ci
       - run:
           name: Run tests
-          command: npm run test 
+          command: npm run test
       - store_test_results:
           path: results.xml
+workflows:
+  run-test-workflow:
+    jobs:
+      - run-test   
