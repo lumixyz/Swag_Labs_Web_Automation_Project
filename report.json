@@ -23,12 +23,8 @@
       ],
       [
         "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
-        null
-      ],
-      [
-        "html",
         {
-          "open": "on-failure"
+          "outputFolder": "allure-results"
         }
       ]
     ],
@@ -97,7 +93,7 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "version": "1.44.1",
+    "version": "1.46.0",
     "workers": 2,
     "webServer": null
   },
@@ -128,14 +124,14 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 5115,
+                      "duration": 5053,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-08-13T18:03:05.370Z",
+                      "startTime": "2024-08-13T19:18:52.337Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -170,8 +166,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-08-13T18:03:03.994Z",
-    "duration": 7496.290000000001,
+    "startTime": "2024-08-13T19:18:51.224Z",
+    "duration": 8176.46100000001,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
