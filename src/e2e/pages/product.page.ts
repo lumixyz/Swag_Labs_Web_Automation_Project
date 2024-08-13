@@ -10,7 +10,6 @@ export default class Product extends Base{
    menu = () => this.page.locator( '#react-burger-menu-btn');
    menuList = () => this.page.locator(".bm-item-list>a");
    closeMenuBtn = () => this.page.locator('#react-burger-cross-btn');
-   pageTitle = () => this.page.locator('.title');
    filter = () => this.page.locator('//*[@id="header_container"]/div[2]/div/span/select');
    cart = () => this.page.locator('.shopping_cart_link');
    itemsList = () => this.page.locator("//div[@class='inventory_list']//a[contains(@data-test, 'title')]//div");
@@ -19,31 +18,26 @@ export default class Product extends Base{
    
    //Actions
     async getMenu(){
-        await this.menu().click();
+       await this.menu().click();
     }
 
     async getAllItems(){
-        await this.getMenu();
         await this.menuList().filter({hasText: "all items"}).click();
     }
 
     async getAboutPage(){
-        await this.getMenu();
         await this.menuList().filter({hasText: "about"}).click();
     }
 
     async logout(){
-        await this.getMenu();
         await this.menuList().filter({hasText: "logout"}).click();
     }
 
     async resetApp(){
-        await this.getMenu();
         await this.menuList().filter({hasText: "reset app state"}).click();
     }
 
     async closeMenu(){
-        await this.getMenu();
         await this.closeMenuBtn().click();
     }
 
@@ -132,7 +126,6 @@ export default class Product extends Base{
  
     
     async proceedToShop(item:string){
-        await this.resetApp();
         await this.addorRemFromCartOnHome(item);
         await this.goToCart();
     }

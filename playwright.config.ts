@@ -11,7 +11,7 @@ export default defineConfig({
 
   fullyParallel: false,
 
-  maxFailures: process.env.CI ? 10 : undefined,
+  maxFailures: process.env.CI ? 10 : 5,
  
   timeout: 1*30*1000,
 
@@ -30,13 +30,12 @@ export default defineConfig({
 
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : 2,
-  
+
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: process.env.CI? [ ["junit", {
     outputFile: "results.xml"
   }], ['blob']] : [["json", 
-    { outputFile: "report.json"}], ["html", 
-    {open: "on-failure"}]],
+    { outputFile: "report.json"}], ["allure-playwright", {outputFolder: "allure-results"}]],
 
   //shard: process.env.CI ? { total: 10, current: 3 } : undefined,
 
@@ -59,15 +58,25 @@ export default defineConfig({
     },
 
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox']},
+      name: 'Microsoft Edge',
+      use: {
+        ...devices['Desktop Edge'],
+        channel: 'msedge',
+      },
     },
 
     {
-      name: 'Google Chrome',
-      use: {
-        ...devices['Desktop Chrome'],
-        channel: 'chrome'
-    }},  
+      name: 'firefox',
+      use: { 
+        ...devices['Desktop Firefox'], 
+      },
+    },
+    
+    {
+      name: 'webkit',
+      use: { 
+        ...devices['Desktop Safari'], 
+      },
+    },
   ]
 });

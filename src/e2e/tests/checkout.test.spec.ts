@@ -2,8 +2,7 @@ import {test, expect} from "../fixtures/base.fixture";
 
 
 test.describe('Checkout details', () =>{
-    test("Set personal information and get overview", async ({login, product, cart, checkout}) => {
-        await login.auth();
+    test("Set personal information and get overview", async ({product, cart, checkout}) => {
         await product.proceedToShop("Sauce Labs Backpack");
         await cart.getCheckout();
        await checkout.setFName("Anna");

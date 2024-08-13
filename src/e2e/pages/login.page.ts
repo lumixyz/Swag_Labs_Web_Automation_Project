@@ -11,6 +11,7 @@ export default class Login extends Base{
    password = () => this.page.locator('#password');
    loginBtn = () => this.page.locator('#login-button');
    loginErr = () => this.page.locator("//*[@id='login_button_container']/div/form/div[3]/h3");
+   pageTitle = () => this.page.locator('.title');
 
    //Actions
     async setUname(username: string){

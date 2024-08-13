@@ -9,7 +9,7 @@
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
-    "maxFailures": 0,
+    "maxFailures": 5,
     "metadata": {
       "actualWorkers": 1
     },
@@ -20,6 +20,10 @@
         {
           "outputFile": "report.json"
         }
+      ],
+      [
+        "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        null
       ],
       [
         "html",
@@ -53,6 +57,20 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
+        "id": "Microsoft Edge",
+        "name": "Microsoft Edge",
+        "testDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/src/e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
         "id": "firefox",
         "name": "firefox",
         "testDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/src/e2e/tests",
@@ -67,8 +85,8 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
-        "id": "Google Chrome",
-        "name": "Google Chrome",
+        "id": "webkit",
+        "name": "webkit",
         "testDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/src/e2e/tests",
         "testIgnore": [],
         "testMatch": [
@@ -85,20 +103,20 @@
   },
   "suites": [
     {
-      "title": "cart.test.spec.ts",
-      "file": "cart.test.spec.ts",
+      "title": "checkout.test.spec.ts",
+      "file": "checkout.test.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Cart icon is updated",
-          "file": "cart.test.spec.ts",
-          "line": 33,
+          "title": "Checkout details",
+          "file": "checkout.test.spec.ts",
+          "line": 4,
           "column": 6,
           "specs": [
             {
-              "title": "Cart icon number increases when items are added",
+              "title": "Set personal information and get overview",
               "ok": true,
               "tags": [],
               "tests": [
@@ -110,29 +128,29 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
+                      "workerIndex": 0,
                       "status": "passed",
-                      "duration": 3597,
+                      "duration": 5115,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-08-13T16:10:00.069Z",
+                      "startTime": "2024-08-13T18:03:05.370Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\cart.test-Cart-icon-is-upd-36714-reases-when-items-are-added-chromium\\test-finished-1.png"
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\checkout.test-Checkout-det-21185-nformation-and-get-overview-chromium\\test-finished-1.png"
                         },
                         {
                           "name": "video",
                           "contentType": "video/webm",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\cart.test-Cart-icon-is-upd-36714-reases-when-items-are-added-chromium\\video.webm"
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\checkout.test-Checkout-det-21185-nformation-and-get-overview-chromium\\video.webm"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\cart.test-Cart-icon-is-upd-36714-reases-when-items-are-added-chromium\\trace.zip"
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\checkout.test-Checkout-det-21185-nformation-and-get-overview-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -140,9 +158,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "f6cae105dfd9db0d3ce1-95626b29b06d0cb7ef42",
-              "file": "cart.test.spec.ts",
-              "line": 34,
+              "id": "4591ce8efaf2880dd230-e93bbab20046fd3daca7",
+              "file": "checkout.test.spec.ts",
+              "line": 5,
               "column": 9
             }
           ]
@@ -152,8 +170,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-08-13T16:09:58.991Z",
-    "duration": 5267.308000000019,
+    "startTime": "2024-08-13T18:03:03.994Z",
+    "duration": 7496.290000000001,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

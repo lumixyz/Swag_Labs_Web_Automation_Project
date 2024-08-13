@@ -7,3 +7,5 @@ projectGuideNotes.txt
 *.env
 statusCodes.txt
 configs-ci-cd.txt
+/allure-report
+/allure-results
