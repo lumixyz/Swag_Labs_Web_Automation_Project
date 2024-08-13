@@ -4,12 +4,14 @@ workflows:
   run-test-workflow:
     jobs:
       - run-test 
+      - notify:
+          context: slack-secrets
 
 jobs:
   run-test:
     docker:
       - image: mcr.microsoft.com/playwright:v1.46.0-jammy
-    parallelism: 2
+    parallelism: 4
     resource_class: large
     steps:
       - checkout
@@ -28,6 +30,19 @@ jobs:
             SHARD="$((${CIRCLE_NODE_INDEX}+1))"
             npm run test -- --shard=${SHARD}/${CIRCLE_NODE_TOTAL}
 
+
+  notify:
+      docker:
+        - image: 'cimg/base:stable'
+      steps:
+        - slack/notify:
+            event: fail
+            template: basic_fail_1
+            mentions: '@lumiolajide'
+        - slack/notify:
+            event: pass
+            template: basic_success_1
+            mentions: '@lumiolajide'
 
       - store_test_results:
           path: results.xml

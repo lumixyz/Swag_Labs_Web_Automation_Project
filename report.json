@@ -99,20 +99,20 @@
   },
   "suites": [
     {
-      "title": "checkout.test.spec.ts",
-      "file": "checkout.test.spec.ts",
+      "title": "visual.test.spec.ts",
+      "file": "visual.test.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Checkout details",
-          "file": "checkout.test.spec.ts",
-          "line": 4,
+          "title": "Verify product images appear as they should",
+          "file": "visual.test.spec.ts",
+          "line": 3,
           "column": 6,
           "specs": [
             {
-              "title": "Set personal information and get overview",
+              "title": "Products Page",
               "ok": true,
               "tags": [],
               "tests": [
@@ -124,29 +124,29 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 7,
                       "status": "passed",
-                      "duration": 5053,
+                      "duration": 2833,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-08-13T19:18:52.337Z",
+                      "startTime": "2024-08-13T19:39:42.768Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\checkout.test-Checkout-det-21185-nformation-and-get-overview-chromium\\test-finished-1.png"
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-0ccf9-s-they-should-Products-Page-chromium\\test-finished-1.png"
                         },
                         {
                           "name": "video",
                           "contentType": "video/webm",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\checkout.test-Checkout-det-21185-nformation-and-get-overview-chromium\\video.webm"
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-0ccf9-s-they-should-Products-Page-chromium\\video.webm"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\checkout.test-Checkout-det-21185-nformation-and-get-overview-chromium\\trace.zip"
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-0ccf9-s-they-should-Products-Page-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -154,9 +154,161 @@
                   "status": "expected"
                 }
               ],
-              "id": "4591ce8efaf2880dd230-e93bbab20046fd3daca7",
-              "file": "checkout.test.spec.ts",
-              "line": 5,
+              "id": "a2772cb0d0a8fcad057d-2a937b38bf7f6ff359d3",
+              "file": "visual.test.spec.ts",
+              "line": 4,
+              "column": 9
+            },
+            {
+              "title": "Site Title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 2365,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-08-13T19:39:45.951Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-7c573-r-as-they-should-Site-Title-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-7c573-r-as-they-should-Site-Title-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-7c573-r-as-they-should-Site-Title-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a2772cb0d0a8fcad057d-1e6482998044250f2110",
+              "file": "visual.test.spec.ts",
+              "line": 9,
+              "column": 9
+            },
+            {
+              "title": "Cart Page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 3917,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-08-13T19:39:48.385Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-0d242-ar-as-they-should-Cart-Page-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-0d242-ar-as-they-should-Cart-Page-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-0d242-ar-as-they-should-Cart-Page-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a2772cb0d0a8fcad057d-2b254ad7fae200145990",
+              "file": "visual.test.spec.ts",
+              "line": 14,
+              "column": 9
+            }
+          ]
+        },
+        {
+          "title": "Products screenshots",
+          "file": "visual.test.spec.ts",
+          "line": 21,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Products Screenshots",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 3412,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-08-13T19:39:52.471Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Products-screenshots-Products-Screenshots-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Products-screenshots-Products-Screenshots-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Products-screenshots-Products-Screenshots-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a2772cb0d0a8fcad057d-f4deabbd5bf78655c6cc",
+              "file": "visual.test.spec.ts",
+              "line": 22,
               "column": 9
             }
           ]
@@ -166,9 +318,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-08-13T19:18:51.224Z",
-    "duration": 8176.46100000001,
-    "expected": 1,
+    "startTime": "2024-08-13T19:39:41.707Z",
+    "duration": 14648.264999999898,
+    "expected": 4,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
