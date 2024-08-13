@@ -32,18 +32,18 @@ jobs:
 
 
   notify:
-      docker:
-        - image: 'cimg/base:stable'
-      steps:
-        - slack/notify:
-            event: fail
-            template: basic_fail_1
-            mentions: '@lumiolajide'
-        - slack/notify:
-            event: pass
-            template: basic_success_1
-            mentions: '@lumiolajide'
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - slack/notify:
+          event: fail
+          template: basic_fail_1
+          mentions: '@lumiolajide'
+      - slack/notify:
+          event: pass
+          template: basic_success_1
+          mentions: '@lumiolajide'
 
-      - store_test_results:
-          path: results.xml
+- store_test_results:
+  path: results.xml
 
