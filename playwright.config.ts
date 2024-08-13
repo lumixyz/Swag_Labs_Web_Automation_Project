@@ -8,13 +8,6 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 export default defineConfig({
   testDir: 'src/e2e/tests',
-  /* Run tests in files in parallel */
-  // path to the global setup files.
-  //globalSetup: require.resolve('./global-setup'),
-
-  // path to the global teardown files.
-  //globalTeardown: require.resolve('./global-teardown'),
-  
   shard: { total: 10, current: 3 },
   snapshotPathTemplate: '{testDir}/__screenshots__/{testFilePath}/{arg}{ext}',
 
@@ -90,7 +83,7 @@ export default defineConfig({
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'],
-        baseURL: "xyz"
+    
       },
       retries: 2,
       dependencies: ['setup'],
@@ -121,11 +114,4 @@ export default defineConfig({
       },
     },
   ],
-
-  // Run your local dev server before starting the tests.
-  webServer: {
-    command: 'npm run start',
-    url: 'http://127.0.0.1:3000',
-    reuseExistingServer: !process.env.CI,
-  }
 });
