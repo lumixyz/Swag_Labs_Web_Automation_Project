@@ -9,7 +9,7 @@ jobs:
   run-test:
     docker:
       - image: mcr.microsoft.com/playwright:v1.46.0-jammy
-    parallelism: 4
+    parallelism: 2
     resource_class: large
     steps:
       - checkout
