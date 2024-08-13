@@ -21,9 +21,11 @@ jobs:
           command: npx playwright install --with-deps
       - run:
           name: Run tests
-          command: npm run test 
+          command: |
+            SHARD="$((${CIRCLE_NODE_INDEX}+1))"
+            npm run test -- --shard=${SHARD}/${CIRCLE_NODE_TOTAL}
 
-          
+
       - store_test_results:
           path: results.xml
 
