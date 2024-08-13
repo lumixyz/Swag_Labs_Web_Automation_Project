@@ -56,16 +56,16 @@ export default defineConfig({
         ...devices['Desktop Chrome']},
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox']},
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox']},
+    // },
 
-    {
-      name: 'Google Chrome',
-      use: {
-        ...devices['Desktop Chrome'],
-        channel: 'chrome'
-      }},
+    // {
+    //   name: 'Google Chrome',
+    //   use: {
+    //     ...devices['Desktop Chrome'],
+    //     channel: 'chrome'
+    //   }},
   ],
 });
