@@ -11,7 +11,6 @@ workflows:
           requires:
             - run-test
           context: slack-secrets
-          when: always  # This ensures that the notify job runs regardless of the outcome of run-test
 
 jobs:
   run-test:
@@ -35,18 +34,35 @@ jobs:
           command: |
             SHARD="$((${CIRCLE_NODE_INDEX}+1))"
             npm run test -- --shard=${SHARD}/${CIRCLE_NODE_TOTAL}
+            TEST_RESULT=$?
+            echo "TEST_RESULT=$TEST_RESULT" > result.env
       - store_test_results:
           path: results.xml
+      - persist_to_workspace:
+          root: .
+          paths:
+            - result.env
 
   notify:
     docker:
       - image: 'cimg/base:stable'
     steps:
-      - slack/notify:
-          event: fail
-          template: basic_fail_1
-          mentions: '@lumiolajide'
-      - slack/notify:
-          event: pass
-          template: basic_success_1
-          mentions: '@lumiolajide'
+      - attach_workspace:
+          at: /workspace
+      - run:
+          name: Notify on Slack
+          command: |
+            source /workspace/result.env
+            if [ "$TEST_RESULT" -eq 0 ]; then
+              echo "Test Passed"
+              npx slack/notify \
+                --event pass \
+                --template basic_success_1 \
+                --mentions '@lumiolajide'
+            else
+              echo "Test Failed"
+              npx slack/notify \
+                --event fail \
+                --template basic_fail_1 \
+                --mentions '@lumiolajide'
+            fi
