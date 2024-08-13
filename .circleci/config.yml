@@ -11,7 +11,8 @@ workflows:
           requires:
             - run-test
           context: slack-secrets
-        
+          when: always  # This ensures that the notify job runs regardless of the outcome of run-test
+
 jobs:
   run-test:
     docker:
