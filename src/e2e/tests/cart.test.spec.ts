@@ -9,7 +9,7 @@ const items = {
 const reversedItems = Object.entries(items).reverse();
 
 test.describe('Items in cart', () =>{
-    test("Item is in cart", async ({login, product, cart}) => {
+    test("Item is in cart", async ({product, cart}) => {
         //await login.auth();
         await product.resetApp();
         await product.addorRemFromCartOnHome("Sauce Labs Backpack");
@@ -32,8 +32,7 @@ test.describe('Items in cart', () =>{
 
 test.describe('Cart icon is updated', () =>{ 
     test("Cart icon number increases when items are added", async ({login, product, cart}) => {
-        await login.auth();
-        await product.resetApp();
+        //await product.resetApp();
         for(const item in items){
             await product.addorRemFromCartOnHome(item);
             expect(await cart.getCartBadgeNo()).toHaveText(items[item]);
@@ -41,7 +40,6 @@ test.describe('Cart icon is updated', () =>{
     })
 
     test("Cart icon number decreases when items are removed", async ({login, product, cart}) => {
-        await login.auth();
         await product.resetApp();
         for(const item in items){
             await product.addorRemFromCartOnHome(item);
@@ -64,9 +62,8 @@ test.describe('Cart icon is updated', () =>{
 }) 
 
 test.describe('Go to Checkout', () =>{ 
-    test("Go to cart", async ({login, product, cart, checkout}) => {
-        await login.auth();
-        await product.resetApp();
+    test("Go to cart", async ({product, cart, checkout}) => {
+        //await product.resetApp();
         for(const item in items){
             await product.addorRemFromCartOnHome(item);
             expect(await cart.getCartBadgeNo()).toHaveText(items[item]);

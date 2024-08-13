@@ -47,6 +47,34 @@
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
         "timeout": 30000
+      },
+      {
+        "outputDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/src/e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "Google Chrome",
+        "name": "Google Chrome",
+        "testDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/src/e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
       }
     ],
     "shard": null,
@@ -57,20 +85,20 @@
   },
   "suites": [
     {
-      "title": "visual.test.spec.ts",
-      "file": "visual.test.spec.ts",
+      "title": "cart.test.spec.ts",
+      "file": "cart.test.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Products screenshots",
-          "file": "visual.test.spec.ts",
-          "line": 24,
+          "title": "Cart icon is updated",
+          "file": "cart.test.spec.ts",
+          "line": 33,
           "column": 6,
           "specs": [
             {
-              "title": "Products Screenshots",
+              "title": "Cart icon number increases when items are added",
               "ok": true,
               "tags": [],
               "tests": [
@@ -82,29 +110,29 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 33,
+                      "workerIndex": 4,
                       "status": "passed",
-                      "duration": 14752,
+                      "duration": 3597,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2024-08-11T19:03:54.713Z",
+                      "startTime": "2024-08-13T16:10:00.069Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Products-screenshots-Products-Screenshots-chromium\\test-finished-1.png"
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\cart.test-Cart-icon-is-upd-36714-reases-when-items-are-added-chromium\\test-finished-1.png"
                         },
                         {
                           "name": "video",
                           "contentType": "video/webm",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Products-screenshots-Products-Screenshots-chromium\\video.webm"
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\cart.test-Cart-icon-is-upd-36714-reases-when-items-are-added-chromium\\video.webm"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Products-screenshots-Products-Screenshots-chromium\\trace.zip"
+                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\cart.test-Cart-icon-is-upd-36714-reases-when-items-are-added-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -112,9 +140,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "a2772cb0d0a8fcad057d-f4deabbd5bf78655c6cc",
-              "file": "visual.test.spec.ts",
-              "line": 25,
+              "id": "f6cae105dfd9db0d3ce1-95626b29b06d0cb7ef42",
+              "file": "cart.test.spec.ts",
+              "line": 34,
               "column": 9
             }
           ]
@@ -124,8 +152,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-08-11T19:03:53.560Z",
-    "duration": 16658.7080000001,
+    "startTime": "2024-08-13T16:09:58.991Z",
+    "duration": 5267.308000000019,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
