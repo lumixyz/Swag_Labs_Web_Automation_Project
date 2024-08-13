@@ -3,7 +3,7 @@ version: 2.1
 workflows:
   run-test-workflow:
     jobs:
-      - run-test 
+      - run-test
       - notify:
           context: slack-secrets
 
@@ -29,7 +29,8 @@ jobs:
           command: |
             SHARD="$((${CIRCLE_NODE_INDEX}+1))"
             npm run test -- --shard=${SHARD}/${CIRCLE_NODE_TOTAL}
-
+      - store_test_results:
+          path: results.xml
 
   notify:
     docker:
@@ -43,7 +44,3 @@ jobs:
           event: pass
           template: basic_success_1
           mentions: '@lumiolajide'
-
-- store_test_results:
-  path: results.xml
-
