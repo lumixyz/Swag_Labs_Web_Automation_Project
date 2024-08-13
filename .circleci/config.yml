@@ -8,6 +8,7 @@ workflows:
     jobs:
       - run-test
       - notify:
+          requires: run-test
           context: slack-secrets
 
 jobs:
@@ -47,3 +48,4 @@ jobs:
           event: pass
           template: basic_success_1
           mentions: '@lumiolajide'
+      
