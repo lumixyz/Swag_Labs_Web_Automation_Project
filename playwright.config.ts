@@ -58,6 +58,17 @@ export default defineConfig({
     },
 
     {
+      name: 'accessibility',
+      testDir: 'src/accessibility/tests',
+      use: {
+        baseURL: "https://www.saucedemo.com",
+        ...devices['Desktop Edge'],
+        storageState: 'playwright/.auth/user.json'
+      },
+      dependencies: ['setup']
+   },
+
+    {
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
@@ -66,24 +77,24 @@ export default defineConfig({
       dependencies: ['setup'],
     },
 
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: {
-    //     ...devices['Desktop Edge'],
-    //     channel: 'msedge',
-    //     storageState: 'playwright/.auth/user.json',
-    //   },
-    //   dependencies: ['setup'],
-    // },
+    {
+      name: 'Microsoft Edge',
+      use: {
+        ...devices['Desktop Edge'],
+        channel: 'msedge',
+        storageState: 'playwright/.auth/user.json',
+      },
+      dependencies: ['setup'],
+    },
 
-    // {
-    //   name: 'firefox',
-    //   use: { 
-    //     ...devices['Desktop Firefox'], 
-    //     storageState: 'playwright/.auth/user.json',
-    //   },
-    //   dependencies: ['setup'],
-    // },
+    {
+      name: 'firefox',
+      use: { 
+        ...devices['Desktop Firefox'], 
+        storageState: 'playwright/.auth/user.json',
+      },
+      dependencies: ['setup'],
+    },
     
     {
       name: 'webkit',
