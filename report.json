@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\playwright.config.ts",
-    "rootDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/src/e2e/tests",
+    "configFile": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\playwright.config.ts",
+    "rootDir": "C:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/src/e2e/tests",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 5,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -22,7 +22,7 @@
         }
       ],
       [
-        "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
         {
           "outputFolder": "allure-results"
         }
@@ -35,13 +35,27 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/test-results",
+        "outputDir": "C:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/src/e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "auth.setup.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
-        "testDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/src/e2e/tests",
+        "testDir": "C:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/src/e2e/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -49,41 +63,13 @@
         "timeout": 30000
       },
       {
-        "outputDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {},
-        "id": "Microsoft Edge",
-        "name": "Microsoft Edge",
-        "testDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/src/e2e/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
-        ],
-        "timeout": 30000
-      },
-      {
-        "outputDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {},
-        "id": "firefox",
-        "name": "firefox",
-        "testDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/src/e2e/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
-        ],
-        "timeout": 30000
-      },
-      {
-        "outputDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/test-results",
+        "outputDir": "C:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "webkit",
         "name": "webkit",
-        "testDir": "c:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/src/e2e/tests",
+        "testDir": "C:/Users/lumio/DevProjects/Swag_Labs_Web_Automation_Project/src/e2e/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -99,217 +85,1098 @@
   },
   "suites": [
     {
-      "title": "visual.test.spec.ts",
-      "file": "visual.test.spec.ts",
+      "title": "auth.setup.spec.ts",
+      "file": "auth.setup.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 2699,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-08-16T13:58:00.760Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\auth.setup-authenticate-setup\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\auth.setup-authenticate-setup\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\auth.setup-authenticate-setup\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fae614d31f085391e0fe-86567d3a721614efa9cf",
+          "file": "auth.setup.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "product.test.spec.ts",
+      "file": "product.test.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Verify product images appear as they should",
-          "file": "visual.test.spec.ts",
-          "line": 3,
+          "title": "Product Tests",
+          "file": "product.test.spec.ts",
+          "line": 6,
           "column": 6,
-          "specs": [
+          "specs": [],
+          "suites": [
             {
-              "title": "Products Page",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "title": "Add & remove items on product page",
+              "file": "product.test.spec.ts",
+              "line": 8,
+              "column": 14,
+              "specs": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "title": "Add product to cart 1",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
                     {
-                      "workerIndex": 7,
-                      "status": "passed",
-                      "duration": 2833,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-08-13T19:39:42.768Z",
-                      "attachments": [
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
                         {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-0ccf9-s-they-should-Products-Page-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-0ccf9-s-they-should-Products-Page-chromium\\video.webm"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-0ccf9-s-they-should-Products-Page-chromium\\trace.zip"
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 4284,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:04.708Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-d0f52--page-Add-product-to-cart-1-chromium\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-d0f52--page-Add-product-to-cart-1-chromium\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-d0f52--page-Add-product-to-cart-1-chromium\\trace.zip"
+                            }
+                          ]
                         }
-                      ]
+                      ],
+                      "status": "expected"
                     }
                   ],
-                  "status": "expected"
+                  "id": "6da6ec565426780f1c2b-00d952e1a2fdc77e32f0",
+                  "file": "product.test.spec.ts",
+                  "line": 9,
+                  "column": 17
+                },
+                {
+                  "title": "Remove product to cart 1",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 3689,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:09.571Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-6e900-ge-Remove-product-to-cart-1-chromium\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-6e900-ge-Remove-product-to-cart-1-chromium\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-6e900-ge-Remove-product-to-cart-1-chromium\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-0857dd4bbc9d7f5414c5",
+                  "file": "product.test.spec.ts",
+                  "line": 14,
+                  "column": 17
+                },
+                {
+                  "title": "Add product to cart 1",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 7606,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:04.710Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-d0f52--page-Add-product-to-cart-1-webkit\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-d0f52--page-Add-product-to-cart-1-webkit\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-d0f52--page-Add-product-to-cart-1-webkit\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-3aa3857332fccd152a2c",
+                  "file": "product.test.spec.ts",
+                  "line": 9,
+                  "column": 17
+                },
+                {
+                  "title": "Remove product to cart 1",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 6692,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:12.609Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-6e900-ge-Remove-product-to-cart-1-webkit\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-6e900-ge-Remove-product-to-cart-1-webkit\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-6e900-ge-Remove-product-to-cart-1-webkit\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-ed14512f4eac0d656d66",
+                  "file": "product.test.spec.ts",
+                  "line": 14,
+                  "column": 17
+                },
+                {
+                  "title": "Add product to cart 2",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 6693,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:19.507Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-204ef--page-Add-product-to-cart-2-webkit\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-204ef--page-Add-product-to-cart-2-webkit\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-204ef--page-Add-product-to-cart-2-webkit\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-3814f74fcd9a319f1b20",
+                  "file": "product.test.spec.ts",
+                  "line": 9,
+                  "column": 17
+                },
+                {
+                  "title": "Remove product to cart 2",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 6999,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:26.384Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-3c5e1-ge-Remove-product-to-cart-2-webkit\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-3c5e1-ge-Remove-product-to-cart-2-webkit\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-3c5e1-ge-Remove-product-to-cart-2-webkit\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-c1ae4760c96b5efdf34d",
+                  "file": "product.test.spec.ts",
+                  "line": 14,
+                  "column": 17
+                },
+                {
+                  "title": "Add product to cart 3",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 6228,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:33.630Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-e4857--page-Add-product-to-cart-3-webkit\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-e4857--page-Add-product-to-cart-3-webkit\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-e4857--page-Add-product-to-cart-3-webkit\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-c33b2ca876919884c3a1",
+                  "file": "product.test.spec.ts",
+                  "line": 9,
+                  "column": 17
+                },
+                {
+                  "title": "Remove product to cart 3",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 6732,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:40.096Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-25207-ge-Remove-product-to-cart-3-webkit\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-25207-ge-Remove-product-to-cart-3-webkit\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-25207-ge-Remove-product-to-cart-3-webkit\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-3a59a6e0b52db121ce4d",
+                  "file": "product.test.spec.ts",
+                  "line": 14,
+                  "column": 17
                 }
-              ],
-              "id": "a2772cb0d0a8fcad057d-2a937b38bf7f6ff359d3",
-              "file": "visual.test.spec.ts",
-              "line": 4,
-              "column": 9
+              ]
             },
             {
-              "title": "Site Title",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "title": "Add & remove items on product page",
+              "file": "product.test.spec.ts",
+              "line": 8,
+              "column": 14,
+              "specs": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "title": "Add product to cart 2",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
                     {
-                      "workerIndex": 7,
-                      "status": "passed",
-                      "duration": 2365,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-08-13T19:39:45.951Z",
-                      "attachments": [
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
                         {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-7c573-r-as-they-should-Site-Title-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-7c573-r-as-they-should-Site-Title-chromium\\video.webm"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-7c573-r-as-they-should-Site-Title-chromium\\trace.zip"
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 3630,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:13.560Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-204ef--page-Add-product-to-cart-2-chromium\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-204ef--page-Add-product-to-cart-2-chromium\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-204ef--page-Add-product-to-cart-2-chromium\\trace.zip"
+                            }
+                          ]
                         }
-                      ]
+                      ],
+                      "status": "expected"
                     }
                   ],
-                  "status": "expected"
+                  "id": "6da6ec565426780f1c2b-daab2c1203f608442f36",
+                  "file": "product.test.spec.ts",
+                  "line": 9,
+                  "column": 17
+                },
+                {
+                  "title": "Remove product to cart 2",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 3919,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:17.372Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-3c5e1-ge-Remove-product-to-cart-2-chromium\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-3c5e1-ge-Remove-product-to-cart-2-chromium\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-3c5e1-ge-Remove-product-to-cart-2-chromium\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-e3b16738374e29aab3df",
+                  "file": "product.test.spec.ts",
+                  "line": 14,
+                  "column": 17
                 }
-              ],
-              "id": "a2772cb0d0a8fcad057d-1e6482998044250f2110",
-              "file": "visual.test.spec.ts",
-              "line": 9,
-              "column": 9
+              ]
             },
             {
-              "title": "Cart Page",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "title": "Add & remove items on product page",
+              "file": "product.test.spec.ts",
+              "line": 8,
+              "column": 14,
+              "specs": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "title": "Add product to cart 3",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
                     {
-                      "workerIndex": 7,
-                      "status": "passed",
-                      "duration": 3917,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-08-13T19:39:48.385Z",
-                      "attachments": [
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
                         {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-0d242-ar-as-they-should-Cart-Page-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-0d242-ar-as-they-should-Cart-Page-chromium\\video.webm"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Verify-product-0d242-ar-as-they-should-Cart-Page-chromium\\trace.zip"
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 3604,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:21.464Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-e4857--page-Add-product-to-cart-3-chromium\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-e4857--page-Add-product-to-cart-3-chromium\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-e4857--page-Add-product-to-cart-3-chromium\\trace.zip"
+                            }
+                          ]
                         }
-                      ]
+                      ],
+                      "status": "expected"
                     }
                   ],
-                  "status": "expected"
+                  "id": "6da6ec565426780f1c2b-dbb519b57088d1f2d76f",
+                  "file": "product.test.spec.ts",
+                  "line": 9,
+                  "column": 17
+                },
+                {
+                  "title": "Remove product to cart 3",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 4059,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:25.250Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-25207-ge-Remove-product-to-cart-3-chromium\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-25207-ge-Remove-product-to-cart-3-chromium\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-25207-ge-Remove-product-to-cart-3-chromium\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-161a7b7ed0930604d6f4",
+                  "file": "product.test.spec.ts",
+                  "line": 14,
+                  "column": 17
                 }
-              ],
-              "id": "a2772cb0d0a8fcad057d-2b254ad7fae200145990",
-              "file": "visual.test.spec.ts",
-              "line": 14,
-              "column": 9
-            }
-          ]
-        },
-        {
-          "title": "Products screenshots",
-          "file": "visual.test.spec.ts",
-          "line": 21,
-          "column": 6,
-          "specs": [
+              ]
+            },
             {
-              "title": "Products Screenshots",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "title": "Filter products",
+              "file": "product.test.spec.ts",
+              "line": 23,
+              "column": 10,
+              "specs": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "title": "Filter products by price: highest to lowest price",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
                     {
-                      "workerIndex": 7,
-                      "status": "passed",
-                      "duration": 3412,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2024-08-13T19:39:52.471Z",
-                      "attachments": [
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
                         {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Products-screenshots-Products-Screenshots-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Products-screenshots-Products-Screenshots-chromium\\video.webm"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "c:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\visual.test-Products-screenshots-Products-Screenshots-chromium\\trace.zip"
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 3688,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "[ \u001b[33m49.99\u001b[39m, \u001b[33m29.99\u001b[39m, \u001b[33m15.99\u001b[39m, \u001b[33m15.99\u001b[39m, \u001b[33m9.99\u001b[39m, \u001b[33m7.99\u001b[39m ]\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:29.479Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-bdecf-ice-highest-to-lowest-price-chromium\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-bdecf-ice-highest-to-lowest-price-chromium\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-bdecf-ice-highest-to-lowest-price-chromium\\trace.zip"
+                            }
+                          ]
                         }
-                      ]
+                      ],
+                      "status": "expected"
                     }
                   ],
-                  "status": "expected"
+                  "id": "6da6ec565426780f1c2b-8a7c5e8890859f95c94f",
+                  "file": "product.test.spec.ts",
+                  "line": 24,
+                  "column": 13
+                },
+                {
+                  "title": "Filter products by price: lowest to highest price",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 4120,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "[ \u001b[33m7.99\u001b[39m, \u001b[33m9.99\u001b[39m, \u001b[33m15.99\u001b[39m, \u001b[33m15.99\u001b[39m, \u001b[33m29.99\u001b[39m, \u001b[33m49.99\u001b[39m ]\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:33.444Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-2dff0-ice-lowest-to-highest-price-chromium\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-2dff0-ice-lowest-to-highest-price-chromium\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-2dff0-ice-lowest-to-highest-price-chromium\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-35a5d0bfaa026fb0bdd0",
+                  "file": "product.test.spec.ts",
+                  "line": 29,
+                  "column": 13
+                },
+                {
+                  "title": "Filter products by name: a - z",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 3876,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "[\n  \u001b[32m'Sauce Labs Backpack'\u001b[39m,\n  \u001b[32m'Sauce Labs Bike Light'\u001b[39m,\n  \u001b[32m'Sauce Labs Bolt T-Shirt'\u001b[39m,\n  \u001b[32m'Sauce Labs Fleece Jacket'\u001b[39m,\n  \u001b[32m'Sauce Labs Onesie'\u001b[39m,\n  \u001b[32m'Test.allTheThings() T-Shirt (Red)'\u001b[39m\n]\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:37.768Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-900c6-lter-products-by-name-a---z-chromium\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-900c6-lter-products-by-name-a---z-chromium\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-900c6-lter-products-by-name-a---z-chromium\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-599fb994a1af8587c863",
+                  "file": "product.test.spec.ts",
+                  "line": 34,
+                  "column": 13
+                },
+                {
+                  "title": "Filter products by name: z - a",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 3670,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "[\n  \u001b[32m'Test.allTheThings() T-Shirt (Red)'\u001b[39m,\n  \u001b[32m'Sauce Labs Onesie'\u001b[39m,\n  \u001b[32m'Sauce Labs Fleece Jacket'\u001b[39m,\n  \u001b[32m'Sauce Labs Bolt T-Shirt'\u001b[39m,\n  \u001b[32m'Sauce Labs Bike Light'\u001b[39m,\n  \u001b[32m'Sauce Labs Backpack'\u001b[39m\n]\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:41.807Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-8d257-lter-products-by-name-z---a-chromium\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-8d257-lter-products-by-name-z---a-chromium\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-8d257-lter-products-by-name-z---a-chromium\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-e6c5520733a0e1285b3c",
+                  "file": "product.test.spec.ts",
+                  "line": 39,
+                  "column": 13
+                },
+                {
+                  "title": "Filter products by price: highest to lowest price",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 5766,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "[ \u001b[33m49.99\u001b[39m, \u001b[33m29.99\u001b[39m, \u001b[33m15.99\u001b[39m, \u001b[33m15.99\u001b[39m, \u001b[33m9.99\u001b[39m, \u001b[33m7.99\u001b[39m ]\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:47.035Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-bdecf-ice-highest-to-lowest-price-webkit\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-bdecf-ice-highest-to-lowest-price-webkit\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-bdecf-ice-highest-to-lowest-price-webkit\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-bc6a87f16b1a3b9772a7",
+                  "file": "product.test.spec.ts",
+                  "line": 24,
+                  "column": 13
+                },
+                {
+                  "title": "Filter products by price: lowest to highest price",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 5805,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "[ \u001b[33m7.99\u001b[39m, \u001b[33m9.99\u001b[39m, \u001b[33m15.99\u001b[39m, \u001b[33m15.99\u001b[39m, \u001b[33m29.99\u001b[39m, \u001b[33m49.99\u001b[39m ]\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:52.964Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-2dff0-ice-lowest-to-highest-price-webkit\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-2dff0-ice-lowest-to-highest-price-webkit\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-2dff0-ice-lowest-to-highest-price-webkit\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-dadaaf165d9651880ae7",
+                  "file": "product.test.spec.ts",
+                  "line": 29,
+                  "column": 13
+                },
+                {
+                  "title": "Filter products by name: a - z",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 5356,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "[\n  \u001b[32m'Sauce Labs Backpack'\u001b[39m,\n  \u001b[32m'Sauce Labs Bike Light'\u001b[39m,\n  \u001b[32m'Sauce Labs Bolt T-Shirt'\u001b[39m,\n  \u001b[32m'Sauce Labs Fleece Jacket'\u001b[39m,\n  \u001b[32m'Sauce Labs Onesie'\u001b[39m,\n  \u001b[32m'Test.allTheThings() T-Shirt (Red)'\u001b[39m\n]\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:58:58.955Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-900c6-lter-products-by-name-a---z-webkit\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-900c6-lter-products-by-name-a---z-webkit\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-900c6-lter-products-by-name-a---z-webkit\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-b82388cd2c04a1ec8223",
+                  "file": "product.test.spec.ts",
+                  "line": 34,
+                  "column": 13
+                },
+                {
+                  "title": "Filter products by name: z - a",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 5421,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "[\n  \u001b[32m'Test.allTheThings() T-Shirt (Red)'\u001b[39m,\n  \u001b[32m'Sauce Labs Onesie'\u001b[39m,\n  \u001b[32m'Sauce Labs Fleece Jacket'\u001b[39m,\n  \u001b[32m'Sauce Labs Bolt T-Shirt'\u001b[39m,\n  \u001b[32m'Sauce Labs Bike Light'\u001b[39m,\n  \u001b[32m'Sauce Labs Backpack'\u001b[39m\n]\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-08-16T13:59:04.488Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-8d257-lter-products-by-name-z---a-webkit\\test-finished-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-8d257-lter-products-by-name-z---a-webkit\\video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\lumio\\DevProjects\\Swag_Labs_Web_Automation_Project\\test-results\\product.test-Product-Tests-8d257-lter-products-by-name-z---a-webkit\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6da6ec565426780f1c2b-2aced5fedc2d136f1ad1",
+                  "file": "product.test.spec.ts",
+                  "line": 39,
+                  "column": 13
                 }
-              ],
-              "id": "a2772cb0d0a8fcad057d-f4deabbd5bf78655c6cc",
-              "file": "visual.test.spec.ts",
-              "line": 22,
-              "column": 9
+              ]
             }
           ]
         }
@@ -318,9 +1185,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-08-13T19:39:41.707Z",
-    "duration": 14648.264999999898,
-    "expected": 4,
+    "startTime": "2024-08-16T13:58:00.175Z",
+    "duration": 69977.813,
+    "expected": 21,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

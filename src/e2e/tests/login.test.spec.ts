@@ -2,6 +2,8 @@ import {test, expect} from "../fixtures/base.fixture";
 import * as loginData from "../utils/testData/login.data.json";
 import * as messages from "../utils/testData/messages.data.json";
 
+test.use({ storageState: { cookies: [], origins: [] } });
+
 test.beforeEach(async ({login})=>{
     await login.getLogin();
 })

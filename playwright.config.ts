@@ -53,30 +53,45 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
+       name: 'setup',
+       testMatch: 'auth.setup.spec.ts',
+    },
+
+    {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-
-    {
-      name: 'Microsoft Edge',
       use: {
-        ...devices['Desktop Edge'],
-        channel: 'msedge',
+        ...devices['Desktop Chrome'],
+        storageState: 'playwright/.auth/user.json',
       },
+      dependencies: ['setup'],
     },
 
-    {
-      name: 'firefox',
-      use: { 
-        ...devices['Desktop Firefox'], 
-      },
-    },
+    // {
+    //   name: 'Microsoft Edge',
+    //   use: {
+    //     ...devices['Desktop Edge'],
+    //     channel: 'msedge',
+    //     storageState: 'playwright/.auth/user.json',
+    //   },
+    //   dependencies: ['setup'],
+    // },
+
+    // {
+    //   name: 'firefox',
+    //   use: { 
+    //     ...devices['Desktop Firefox'], 
+    //     storageState: 'playwright/.auth/user.json',
+    //   },
+    //   dependencies: ['setup'],
+    // },
     
     {
       name: 'webkit',
       use: { 
-        ...devices['Desktop Safari'], 
+        ...devices['Desktop Safari'],
+        storageState: 'playwright/.auth/user.json', 
       },
+      dependencies: ['setup'],
     },
   ]
 });
