@@ -11,6 +11,7 @@ export default class Login extends Base{
    password = () => this.page.locator('#password');
    loginBtn = () => this.page.locator('#login-button');
    loginErr = () => this.page.locator("//*[@id='login_button_container']/div/form/div[3]/h3");
+   pageTitle = () => this.page.locator('.title');
 
    //Actions
     async setUname(username: string){
@@ -31,7 +32,6 @@ export default class Login extends Base{
 
     //auth
     async auth(){
-        await this.getLogin();
         await this.setUname('standard_user');
         await this.setPassword('secret_sauce');
         await this.clickLoginBtn();

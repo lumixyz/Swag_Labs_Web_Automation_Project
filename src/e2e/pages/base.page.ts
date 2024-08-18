@@ -16,4 +16,8 @@ export default class Base{
           .map(word => word.charAt(0).toUpperCase() + word.slice(1))
           .join(' ');
      }
+
+    refactorItemName(item: string){
+      return item.split(' ').join('-').toLowerCase();
+    }
 }
