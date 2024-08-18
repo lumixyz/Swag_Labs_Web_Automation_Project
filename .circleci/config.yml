@@ -1,16 +1,9 @@
 version: 2.1
 
-orbs:
-  slack: circleci/slack@4.9.3
-
 workflows:
   run-test-workflow:
     jobs:
       - run-test
-      - notify:
-          requires:
-            - run-test
-          context: slack-secrets
 
 jobs:
   run-test:
@@ -38,31 +31,3 @@ jobs:
             echo "TEST_RESULT=$TEST_RESULT" > result.env
       - store_test_results:
           path: results.xml
-      - persist_to_workspace:
-          root: .
-          paths:
-            - result.env
-
-  notify:
-    docker:
-      - image: 'cimg/base:stable'
-    steps:
-      - attach_workspace:
-          at: /workspace
-      - run:
-          name: Notify on Slack
-          command: |
-            source /workspace/result.env
-            if [ "$TEST_RESULT" -eq 0 ]; then
-              echo "Test Passed"
-              npx slack/notify \
-                --event pass \
-                --template basic_success_1 \
-                --mentions '@lumiolajide'
-            else
-              echo "Test Failed"
-              npx slack/notify \
-                --event fail \
-                --template basic_fail_1 \
-                --mentions '@lumiolajide'
-            fi
