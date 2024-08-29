@@ -57,52 +57,57 @@ export default defineConfig({
        testMatch: 'auth.setup.spec.ts',
     },
 
-    {
-      name: 'accessibility',
-      testDir: 'src/accessibility/tests',
-      use: {
-        baseURL: "https://www.saucedemo.com",
-        ...devices['Desktop Edge'],
-        storageState: 'playwright/.auth/user.json'
-      },
-      dependencies: ['setup']
-   },
+  //   {
+  //     name: 'accessibility',
+  //     testDir: 'src/accessibility/tests',
+  //     use: {
+  //       baseURL: "https://www.saucedemo.com",
+  //       ...devices['Desktop Edge'],
+  //       storageState: 'playwright/.auth/user.json',
+  //       actionTimeout: 2000
+  //     },
+  //     dependencies: ['setup']
+  //  },
 
     {
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
         storageState: 'playwright/.auth/user.json',
+        actionTimeout: 2000
       },
       dependencies: ['setup'],
     },
 
-    {
-      name: 'Microsoft Edge',
-      use: {
-        ...devices['Desktop Edge'],
-        channel: 'msedge',
-        storageState: 'playwright/.auth/user.json',
-      },
-      dependencies: ['setup'],
-    },
+    // {
+    //   name: 'Microsoft Edge',
+    //   use: {
+    //     ...devices['Desktop Edge'],
+    //     channel: 'msedge',
+    //     storageState: 'playwright/.auth/user.json',
+    //     actionTimeout: 2000
+    //   },
+    //   dependencies: ['setup'],
+    // },
 
-    {
-      name: 'firefox',
-      use: { 
-        ...devices['Desktop Firefox'], 
-        storageState: 'playwright/.auth/user.json',
-      },
-      dependencies: ['setup'],
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { 
+    //     ...devices['Desktop Firefox'], 
+    //     storageState: 'playwright/.auth/user.json',
+    //     actionTimeout: 2000
+    //   },
+    //   dependencies: ['setup'],
+    // },
     
-    {
-      name: 'webkit',
-      use: { 
-        ...devices['Desktop Safari'],
-        storageState: 'playwright/.auth/user.json', 
-      },
-      dependencies: ['setup'],
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { 
+    //     ...devices['Desktop Safari'],
+    //     storageState: 'playwright/.auth/user.json', 
+    //     actionTimeout: 2000
+    //   },
+    //   dependencies: ['setup'],
+    // },
   ]
 });

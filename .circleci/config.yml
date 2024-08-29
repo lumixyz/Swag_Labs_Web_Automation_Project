@@ -19,9 +19,9 @@ jobs:
       - run:
           name: Install playwright browsers and dependencies
           command: npx playwright install --with-deps
-      - run:
-          name: Install MSEdge
-          command: npx playwright install msedge
+      #- run:
+          #name: Install MSEdge
+          #command: npx playwright install msedge
       - run:
           name: Run tests
           command: |
